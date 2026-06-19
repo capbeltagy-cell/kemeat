@@ -25,6 +25,11 @@ jobs:
       - name: Grant Execute Permission to Gradlew
         run: chmod +x gradlew
 
+      - name: Setup Environment and Keystore
+        run: |
+          cp .env.example .env
+          base64 -d debug.keystore.base64 > debug.keystore
+
       - name: Build Debug APK
         run: ./gradlew assembleDebug
 

@@ -121,7 +121,8 @@ fun MainGameContainer(
                     )
                     GameScreenDestination.GameConfigSettings -> SettingsScreen(
                         viewModel = viewModel,
-                        onBack = { currentDestination = GameScreenDestination.MainMenu }
+                        onBack = { currentDestination = GameScreenDestination.MainMenu },
+                        onNavigateToPrivacy = { currentDestination = GameScreenDestination.PolicyTermsScreen }
                     )
                     GameScreenDestination.PolicyTermsScreen -> PrivacyTermsScreen(
                         onBack = { currentDestination = GameScreenDestination.GameConfigSettings }
@@ -1436,7 +1437,8 @@ fun LeaderboardScreen(
 @Composable
 fun SettingsScreen(
     viewModel: GameViewModel,
-    onBack: () -> Unit
+    onBack: () -> Unit,
+    onNavigateToPrivacy: () -> Unit
 ) {
     val progress by viewModel.userProgress.collectAsState()
     val context = LocalContext.current
@@ -1766,7 +1768,7 @@ fun SettingsScreen(
             // Privacy button policy screen
             item {
                 Button(
-                    onClick = { onBack() },
+                    onClick = { onNavigateToPrivacy() },
                     colors = ButtonDefaults.buttonColors(containerColor = SandMedium, contentColor = PearlWhite),
                     modifier = Modifier.fillMaxWidth()
                 ) {

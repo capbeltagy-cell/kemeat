@@ -1,0 +1,6 @@
+# Ensure binary files are not treated as text (preventing corruption)
+*.jar binary
+
+# Ensure helper build scripts maintain proper line endings across environments
+gradlew text eol=lf
+gradlew.bat text eol=crlf

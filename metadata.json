@@ -1,0 +1,6 @@
+{
+  "name": "Khemet Gold",
+  "description": "An ancient Egyptian treasure arcade game. Tap falling golden scarabs, avoid curses, explore mystical temples, and collect historical relics!",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

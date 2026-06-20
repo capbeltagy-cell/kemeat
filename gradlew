@@ -1,5 +1,4 @@
 #!/bin/sh
-# Verified Gradle wrapper execution script
 
 #
 # Copyright © 2015 the original authors.
